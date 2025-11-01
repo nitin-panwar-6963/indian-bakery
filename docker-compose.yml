@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+ nginx:
+   build:
+     context: .
+   container_name: "indian-bakery"
+   ports:
+     - "5500:80"
+   restart: always
+       
