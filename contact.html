@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Indian Bakery — Contact</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="https://i.ibb.co/0Jmshvb/bakery-logo.png" alt="logo" class="logo">
+      <h1>Indian Bakery</h1>
+    </div>
+
+    <div class="controls">
+      <button id="theme-toggle-3" class="icon-btn" aria-label="Toggle theme"></button>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html" class="active">Contact</a>
+        <button id="cart-btn-3" class="cart-btn">Cart <span id="cart-count-3">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact">
+    <h2>Contact Us</h2>
+    <p>Visit our shop or send a message.</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Our Location</h3>
+        <p>Meerut, Uttar Pradesh, India</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ indianbakery@gmail.com</p>
+      </div>
+
+      <form id="contact-form" class="contact-card">
+        <h3>Send a message</h3>
+        <label>
+          Name
+          <input id="cname" required />
+        </label>
+        <label>
+          Email
+          <input id="cemail" type="email" required />
+        </label>
+        <label>
+          Message
+          <textarea id="cmsg" rows="5" required></textarea>
+        </label>
+        <div style="display:flex;gap:10px;">
+          <button type="submit" class="btn">Send</button>
+          <button type="reset" class="btn secondary">Clear</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year-contact"></span> Indian Bakery
+  </footer>
+
+  <div id="cart-box" class="cart-box" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year-contact').textContent = new Date().getFullYear();</script>
+</body>
+</html>

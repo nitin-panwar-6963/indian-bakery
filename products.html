@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Indian Bakery — Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="https://i.ibb.co/0Jmshvb/bakery-logo.png" alt="logo" class="logo">
+      <h1>Indian Bakery</h1>
+    </div>
+
+    <div class="controls">
+      <button id="theme-toggle-2" class="icon-btn" aria-label="Toggle theme">🌙</button>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+        <button id="cart-btn-2" class="cart-btn">Cart <span id="cart-count-2">0</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="top-row">
+      <h2>Products</h2>
+      <div class="search-wrap">
+        <input id="search" placeholder="Search sweets, snacks, cakes..." />
+      </div>
+    </div>
+
+    <div id="product-list" class="products-grid">
+      <!-- products rendered by script.js -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    © <span id="year-products"></span> Indian Bakery — All Rights Reserved
+  </footer>
+
+  <div id="cart-box" class="cart-box" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year-products').textContent = new Date().getFullYear();</script>
+</body>
+</html>
